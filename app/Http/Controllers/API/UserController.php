@@ -50,14 +50,14 @@ class UserController extends Controller
             'password' => 'required|string|min:6'
         ]);
 
-        return User::create([
+        return User::create(array_filter([
             'name' => $request['name'],
             'email' => $request['email'],
             'type' => $request['type'],
             'bio' => $request['bio'],
             'photo' => $request['photo'],
             'password' => Hash::make($request['password']),
-        ]);
+        ]));
 
 
     }
