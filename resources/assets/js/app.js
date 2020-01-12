@@ -60,13 +60,12 @@ const router = new VueRouter({
 
 
 
-Vue.filter('upText', function(text){
-    return text.charAt(0).toUpperCase() + text.slice(1)
-});
+Vue.filter('upText',text => text.charAt(0).toUpperCase() + text.slice(1));
 
-Vue.filter('myDate',function(created){
-    return moment(created).format('MMMM Do YYYY');
-});
+
+
+
+Vue.filter('myDate',created => moment(created).format('MMMM Do YYYY'));
 
 
 window.Fire =  new Vue();
